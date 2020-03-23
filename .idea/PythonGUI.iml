@@ -2,13 +2,10 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Demo3_1LineEdit" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/demo2_3SigSlot" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/demo2_4NewSlot" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo2_5Resource" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo3_3ProgressBar" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (jeee)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
