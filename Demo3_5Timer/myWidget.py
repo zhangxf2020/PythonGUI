@@ -14,7 +14,7 @@ class QmyWidget(QWidget):
         self.timer.setInterval(1000)
         self.timer.start()
         self.timer.timeout.connect(self.do_timer_timeout)
-        self.counttime = QTime()
+        self.counttime = QTime() #创建当前时间对象
 
     def do_timer_timeout(self):
         self.datetime = QTime.currentTime()
@@ -31,7 +31,7 @@ class QmyWidget(QWidget):
         self.ui.btnStart.setEnabled(False)
         self.ui.btnStop.setEnabled(True)
         self.ui.btnSetIntv.setEnabled(False)
-        self.counttime.start()
+        self.counttime.start() #点击开始后，时间对象开始计时
         self.ui.LabElapsedTime.setText('流逝的时间')
 
     def on_btnStop_clicked(self):
@@ -39,7 +39,7 @@ class QmyWidget(QWidget):
         self.ui.btnStart.setEnabled(True)
         self.ui.btnStop.setEnabled(False)
         self.ui.btnSetIntv.setEnabled(True)
-        tmMs = self.counttime.elapsed()
+        tmMs = self.counttime.elapsed() #点击结束按钮后，此方法可返回计时的时间，返回毫秒
 
         Ms = tmMs % 1000
         sec = tmMs // 1000
