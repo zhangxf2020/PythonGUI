@@ -2,16 +2,20 @@
 
 # Form implementation generated from reading ui file 'MainWindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(723, 442)
+        MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        MainWindow.setAnimated(True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
@@ -37,9 +41,11 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setMovable(True)
+        self.toolBar.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
+        self.toolBar.setFloatable(True)
         self.toolBar.setObjectName("toolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
-        MainWindow.insertToolBarBreak(self.toolBar)
         self.actFile_New = QtWidgets.QAction(MainWindow)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icons/images/100.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -116,6 +122,7 @@ class Ui_MainWindow(object):
         self.actFont_UnderLine.setIcon(icon12)
         self.actFont_UnderLine.setObjectName("actFont_UnderLine")
         self.actSys_ToggleText = QtWidgets.QAction(MainWindow)
+        self.actSys_ToggleText.setCheckable(True)
         icon13 = QtGui.QIcon()
         icon13.addPixmap(QtGui.QPixmap(":/icons/images/322.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actSys_ToggleText.setIcon(icon13)
@@ -255,8 +262,8 @@ class Ui_MainWindow(object):
         self.actSys_ToggleText.setText(_translate("MainWindow", "显示按钮文字"))
         self.actLang_CN.setText(_translate("MainWindow", "汉语"))
         self.actLang_EN.setText(_translate("MainWindow", "英语"))
-
 import res_rc
+
 
 if __name__ == "__main__":
     import sys
@@ -266,4 +273,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

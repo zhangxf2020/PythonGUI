@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>Demo3_7 QAction,QMainWindow,QPlainTextEdit</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextUnderIcon</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPlainTextEdit" name="plainTextEdit">
     <property name="geometry">
@@ -141,11 +147,20 @@ if __name__ == '__main__':
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
    <addaction name="actFile_New"/>
    <addaction name="actFile_Open"/>
@@ -313,6 +328,9 @@ if __name__ == '__main__':
    </property>
   </action>
   <action name="actSys_ToggleText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/res.qrc">
      <normaloff>:/icons/images/322.bmp</normaloff>:/icons/images/322.bmp</iconset>
