@@ -15,10 +15,12 @@ class QmyMainWidget(QMainWindow):
 
         self.__setActionsForButton()
         self.__createSelectionPopMenu()
+        #设置两个私有变量,保存toolbuton的flag(可以修改按钮的标志,例如是否选中/可选择/可变更/可编辑)状态
         self.__FlagEditable = (Qt.ItemIsSelectable | Qt.ItemIsUserCheckable | Qt.ItemIsEnabled | Qt.ItemIsEditable)
         self.__FlagNotEditable = (Qt.ItemIsSelectable | Qt.ItemIsUserCheckable | Qt.ItemIsEnabled)
 
     def __setActionsForButton(self):
+        #构造函数自动执行,主要设置toolbutton与action动作连接,连接之后,工具按钮将拥有action的图标/文字/和样式
         self.ui.btnList_Ini.setDefaultAction(self.ui.act_InitializationList)
         self.ui.btnList_Clear.setDefaultAction(self.ui.act_ClearList)
         self.ui.btnList_Insert.setDefaultAction(self.ui.act_Insert)
@@ -30,11 +32,12 @@ class QmyMainWidget(QMainWindow):
         self.ui.btnSel_Invs.setDefaultAction(self.ui.act_ReverseElection)
 
     def __createSelectionPopMenu(self):
+        #构造函数自动执行,创建一个菜单,菜单中添加3个选中行为
         menuSelection = QMenu(self)
         menuSelection.addActions([self.ui.act_AllSelect,self.ui.act_AllUnselect,self.ui.act_ReverseElection])
 
         self.ui.btnSelectItem.setPopupMode(QToolButton.MenuButtonPopup)#添加工具按钮下拉箭头样式(在右侧)
-        self.ui.btnSelectItem.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
+        self.ui.btnSelectItem.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)#设置工具按钮文字图标样式(图标在文字左侧)
         self.ui.btnSelectItem.setDefaultAction(self.ui.act_Itemselection)#关联行为后,按钮文字都会与行为显示一致
         self.ui.btnSelectItem.setMenu(menuSelection)
 
