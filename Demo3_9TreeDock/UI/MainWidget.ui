@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>399</height>
+    <width>870</width>
+    <height>752</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,14 @@
    <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>431</width>
-      <height>301</height>
+      <x>0</x>
+      <y>0</y>
+      <width>571</width>
+      <height>371</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="widgetResizable">
      <bool>true</bool>
@@ -34,8 +37,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>429</width>
-       <height>299</height>
+       <width>569</width>
+       <height>369</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -64,7 +67,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>793</width>
+     <width>870</width>
      <height>23</height>
     </rect>
    </property>
@@ -333,6 +336,12 @@
    </property>
   </action>
   <action name="act_FormFloating">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/res.qrc">
      <normaloff>:/icons/icons/814.bmp</normaloff>:/icons/icons/814.bmp</iconset>
@@ -342,6 +351,12 @@
    </property>
   </action>
   <action name="act_FormVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/res.qrc">
      <normaloff>:/icons/icons/414.bmp</normaloff>:/icons/icons/414.bmp</iconset>

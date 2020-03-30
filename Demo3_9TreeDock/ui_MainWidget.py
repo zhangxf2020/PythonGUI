@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'MainWidget.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.1
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -13,16 +13,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(793, 399)
+        MainWindow.resize(870, 752)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(20, 10, 431, 301))
+        self.scrollArea.setGeometry(QtCore.QRect(0, 0, 571, 371))
+        self.scrollArea.setStyleSheet("")
         self.scrollArea.setWidgetResizable(True)
-        self.scrollArea.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.scrollArea.setAlignment(QtCore.Qt.AlignCenter)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 429, 299))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 569, 369))
+        self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(0, 0))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -33,7 +35,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 793, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 870, 23))
         self.menubar.setObjectName("menubar")
         self.menu = QtWidgets.QMenu(self.menubar)
         self.menu.setObjectName("menu")
@@ -48,6 +50,8 @@ class Ui_MainWindow(object):
         self.mainToolBar.setObjectName("mainToolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.mainToolBar)
         self.dockWidget = QtWidgets.QDockWidget(MainWindow)
+        self.dockWidget.setFeatures(QtWidgets.QDockWidget.AllDockWidgetFeatures)
+        self.dockWidget.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea|QtCore.Qt.RightDockWidgetArea)
         self.dockWidget.setObjectName("dockWidget")
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
@@ -129,11 +133,15 @@ class Ui_MainWindow(object):
         self.act_SuitableHeight.setIcon(icon11)
         self.act_SuitableHeight.setObjectName("act_SuitableHeight")
         self.act_FormFloating = QtWidgets.QAction(MainWindow)
+        self.act_FormFloating.setCheckable(True)
+        self.act_FormFloating.setChecked(False)
         icon12 = QtGui.QIcon()
         icon12.addPixmap(QtGui.QPixmap(":/icons/icons/814.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.act_FormFloating.setIcon(icon12)
         self.act_FormFloating.setObjectName("act_FormFloating")
         self.act_FormVisible = QtWidgets.QAction(MainWindow)
+        self.act_FormVisible.setCheckable(True)
+        self.act_FormVisible.setChecked(True)
         self.act_FormVisible.setIcon(icon9)
         self.act_FormVisible.setObjectName("act_FormVisible")
         self.menu.addAction(self.act_AddDirectory)
