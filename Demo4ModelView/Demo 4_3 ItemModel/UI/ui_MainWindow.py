@@ -98,7 +98,6 @@ class Ui_MainWindow(object):
         icon9 = QtGui.QIcon()
         icon9.addPixmap(QtGui.QPixmap(":/icons/images/500.bmp"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.act_FontBold.setIcon(icon9)
-        self.act_FontBold.setCheckable(True)
         self.act_FontBold.setObjectName("act_FontBold")
         self.act_Exit = QtWidgets.QAction(MainWindow)
         icon10 = QtGui.QIcon()
