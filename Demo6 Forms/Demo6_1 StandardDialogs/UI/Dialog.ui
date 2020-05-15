@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Demo6_1,标准对话框的使用</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>标准对话框</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btn_Open">
+          <property name="text">
+           <string>打开一个文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="btn_ProgressDialog">
+          <property name="text">
+           <string>进度对话框</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btn_ChooseColor">
+          <property name="text">
+           <string>选择颜色</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="btn_ChooseFont">
+          <property name="text">
+           <string>选择字体</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="btn_Save">
+          <property name="text">
+           <string>保存文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btn_OpenMultipleFiles">
+          <property name="text">
+           <string>打开多个文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btn_ChooseExistiongDirectory">
+          <property name="text">
+           <string>选择已有目录</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>标准消息框QMessageBox</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btn_MSGquestion">
+          <property name="text">
+           <string>question</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btn_MSGinformation">
+          <property name="text">
+           <string>information</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btn_MSGwarning">
+          <property name="text">
+           <string>warning</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="btn_MSGcritical">
+          <property name="text">
+           <string>critical</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="btn_MSGabout">
+          <property name="text">
+           <string>about</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="btn_MSGaboutQt">
+          <property name="text">
+           <string>aboutQt</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>标准输入对话框QInputDialog</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btn_EnterInteger">
+          <property name="text">
+           <string>输入整数</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="btn_EnterFloat">
+          <property name="text">
+           <string>输入浮点数</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btn_InputString">
+          <property name="text">
+           <string>输入字符串</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="btn_EntrySelectionInput">
+          <property name="text">
+           <string>条目选择输入</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_20">
+          <property name="text">
+           <string>清除文本框内容</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../Resource/res.qrc">
+            <normaloff>:/icons/images/212.bmp</normaloff>:/icons/images/212.bmp</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_21">
+          <property name="text">
+           <string>退出</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../Resource/res.qrc">
+            <normaloff>:/icons/images/132.bmp</normaloff>:/icons/images/132.bmp</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="plainTextEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../Resource/res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_20</sender>
+   <signal>clicked()</signal>
+   <receiver>plainTextEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>416</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_21</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>611</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
