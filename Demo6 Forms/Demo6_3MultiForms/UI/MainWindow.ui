@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Demo6_3 多窗口应用程序</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>491</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="embedded_Widget"/>
+   <addaction name="independent_Widget"/>
+   <addaction name="separator"/>
+   <addaction name="embedded_MainWindow"/>
+   <addaction name="independent_MainWindow"/>
+   <addaction name="separator"/>
+   <addaction name="act_Exit"/>
+  </widget>
+  <action name="embedded_Widget">
+   <property name="icon">
+    <iconset resource="../Resource/res.qrc">
+     <normaloff>:/icons/images/430.bmp</normaloff>:/icons/images/430.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入式Widget</string>
+   </property>
+  </action>
+  <action name="independent_Widget">
+   <property name="icon">
+    <iconset resource="../Resource/res.qrc">
+     <normaloff>:/icons/images/806.bmp</normaloff>:/icons/images/806.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>独立Widget窗口</string>
+   </property>
+  </action>
+  <action name="embedded_MainWindow">
+   <property name="icon">
+    <iconset resource="../Resource/res.qrc">
+     <normaloff>:/icons/images/808.bmp</normaloff>:/icons/images/808.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入式MainWindow</string>
+   </property>
+  </action>
+  <action name="independent_MainWindow">
+   <property name="icon">
+    <iconset resource="../Resource/res.qrc">
+     <normaloff>:/icons/images/804.bmp</normaloff>:/icons/images/804.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>独立MainWindow窗口</string>
+   </property>
+  </action>
+  <action name="act_Exit">
+   <property name="icon">
+    <iconset resource="../Resource/res.qrc">
+     <normaloff>:/icons/images/132.bmp</normaloff>:/icons/images/132.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../Resource/res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>act_Exit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

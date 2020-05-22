@@ -6,6 +6,7 @@ from PyQt5.QtCore import QItemSelectionModel,pyqtSignal,QModelIndex,pyqtSlot,Qt
 from ui_MainWindow import Ui_MainWindow
 from myDialogSize import QmyDialogSize
 from myDialogHeaders import  QmyDialogHeaders
+from myDialogLocate import QmyDialogLocate
 
 class QmyMainWindow(QMainWindow):
     cellIndexChanged = pyqtSignal(int,int)
@@ -54,13 +55,25 @@ class QmyMainWindow(QMainWindow):
         if count !=self.itemModel.columnCount():#如果列表数量与当前模型列数不一致
             strList =[]
             for i in range(self.itemModel.columnCount()):
-                text = str(self.itemModel.headerData(i,Qt.Horizontal,Qt.DisplayRole))
+                text = str(self.itemModel.headerData(i,Qt.Horizontal,Qt.DisplayRole))#获得模型中的item数据(,增长方向,返回模式(字符串/图标等))
                 strList.append(text)
             self.__dlgSetHeaders.setHeaderList(strList)
         ret = self.__dlgSetHeaders.exec()
         if ret == QDialog.Accepted:
             strList2 = self.__dlgSetHeaders.headerList()
             self.itemModel.setHorizontalHeaderLabels(strList2)
+    #定位单元格
+    @pyqtSlot()
+    def on_actTab_Locate_triggered(self):
+        dlgLocate = QmyDialogLocate(self)
+        dlgLocate.setSpinRange(self.itemModel.rowCount(),self.itemModel.columnCount())
+        dlgLocate.changeActionEnable.connect(self.do_setActLocateEnable)
+        dlgLocate.changeCellText.connect(self.do_setACellText)
+        self.cellIndexChanged.connect(dlgLocate.do_setSpinValue)
+        dlgLocate.setAttribute(Qt.WA_DeleteOnClose)
+        dlgLocate.show()
+
+
 
     ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~自定义功能函数~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     def do_currentChanged(self,current:QModelIndex,previous:QModelIndex):
@@ -69,7 +82,13 @@ class QmyMainWindow(QMainWindow):
             item = self.itemModel.itemFromIndex(current)#从索引获得单元格对象
             self.LabCellText.setText('单元格内容:'+item.text())#显示单元格内容
             self.cellIndexChanged.emit(current.row(),current.column())#同时发射自定义信号,传出单元格对象索引位置
-
+    def do_setActLocateEnable(self,enable):
+        self.ui.actTab_Locate.setEnabled(enable)
+    def do_setACellText(self,row,column,text):
+        index = self.itemModel.index(row,column)
+        # self.selectionModel.clearSelection()
+        # self.selectionModel.setCurrentIndex(index,QItemSelectionModel.Select)
+        self.itemModel.setData(index,text,Qt.DisplayRole)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

@@ -3,9 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo4ModelView/Demo 4_3 ItemModel" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo4ModelView/Demo4_4 Delegate" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Demo6 Forms/Demo6_2CustomDialog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Demo6 Forms/Demo6_3MultiForms" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
